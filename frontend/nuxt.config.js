@@ -1,5 +1,5 @@
 
-export default {
+module.exports = {
   mode: 'universal',
   /*
   ** Headers of the page
@@ -22,8 +22,7 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['~/assets/css/transitions.css'],
   /*
   ** Plugins to load before mounting the App
   */
@@ -40,7 +39,14 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
   ],
+  /*
+  ** Axios
+  */
+  axios: {
+    baseURL: "http://localhost:8000/api",
+  },
   /*
   ** Build configuration
   */
@@ -50,5 +56,5 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
 }
